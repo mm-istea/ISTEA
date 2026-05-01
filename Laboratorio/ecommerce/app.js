@@ -14,6 +14,16 @@ const productos = [
     titulo: "Producto 2",
     precio: 20,
     imagen: "data:image/svg+xml;charset=UTF-8,%3Csvg width='300' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='blue'/%3E%3C/svg%3E"
+  },
+  {
+    titulo: "Producto 3",
+    precio: 10,
+    imagen: "data:image/svg+xml;charset=UTF-8,%3Csvg width='300' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='green'/%3E%3C/svg%3E"
+  },
+  {
+    titulo: "Producto 4",
+    precio: 20,
+    imagen: "data:image/svg+xml;charset=UTF-8,%3Csvg width='300' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='orange'/%3E%3C/svg%3E"
   }
 ];
 
