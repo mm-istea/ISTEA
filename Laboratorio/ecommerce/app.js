@@ -1,23 +1,11 @@
-console.log("js cargado");
+//console.log("js cargado");
 
 const contenedor = document.getElementById("productos");
-
-
-
+const buscador = document.getElementById("buscador");
 
 let productos = [];
 let productosBase = [];
 
-function cargarProductos(url) {
-  fetch(url)
-    .then(r => r.json())
-    .then(data => {
-      productosBase = data;
-      productos = data;
-      renderizar(productos);
-    });
-}
-//ahora funciona la api
 Promise.all([
   fetch("https://fakestoreapi.com/products/category/men's clothing").then(r => r.json()),
   fetch("https://fakestoreapi.com/products/category/women's clothing").then(r => r.json())
@@ -26,6 +14,9 @@ Promise.all([
   productosBase = [...data[0], ...data[1]];
   productos = productosBase;
   renderizar(productos);
+})
+.catch(err => {
+  console.log("Error API:", err);
 });
 
 function renderizar(lista) {
@@ -54,4 +45,3 @@ buscador.addEventListener("input", (e) => {
 
   renderizar(filtrados);
 });
-
