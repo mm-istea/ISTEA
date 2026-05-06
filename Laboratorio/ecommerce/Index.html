@@ -5,39 +5,45 @@
   <title>E-commerce ISTEA</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-  <h1>ISTEA ECOMMERCE</h1>
-
-  <input type="text" id="buscador" placeholder="Busque sus productos...">
+  <h1>ISTEA E-COMMERCE</h1>
+  <input type="text" id="buscador" placeholder="Buscar productos...">
+  <div id="icono_carrito">🛒 <span id="contador_carrito">0</span></div>
 </header>
 
 <main>
+ 
   <section id="productos"></section>
 </main>
 
-<footer>
-  <p>© 2026 E-Commerce Istea</p>
-</footer>
-
-<!-- MODAL -->
+<!-- MODAL DE DETALLES -->
 <div id="modal" class="modal">
   <div class="modal_contenido">
-
     <span id="cerrar_modal" class="cerrar_modal">X</span>
-
     <img id="modal_imagen" src="">
     <h2 id="modal_titulo"></h2>
     <p id="modal_descripcion"></p>
     <p id="modal_precio"></p>
-
     <button id="btn_agregar">Agregar al carrito</button>
   </div>
 </div>
 
-<script src="app.js"></script>
+<!-- CARRITO -->
+<aside id="sidebar" class="sidebar">
+  <span id="cerrar_sidebar" style="cursor:pointer; font-size: 24px;">X</span>
+  <h2>Tu Carrito</h2>
+  <div id="carrito_items"></div>
+  <h3 id="precio_total">Total: $0</h3>
+  <button id="finalizar_compra">Finalizar compra</button>
+  <button id="vaciar_carrito">Vaciar carrito</button>
+</aside>
 
+<footer>
+  <p>© 2026 E-Commerce Istea - Laboratorio Web</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
